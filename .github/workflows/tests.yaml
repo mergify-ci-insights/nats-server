@@ -2,8 +2,12 @@ name: NATS Server Tests
 
 on:
   push:
+    branches:
+      - main
   pull_request:
   workflow_dispatch:
+  schedule:
+    - cron: 0 */4 * * 1-5
 
 permissions:
   contents: read
